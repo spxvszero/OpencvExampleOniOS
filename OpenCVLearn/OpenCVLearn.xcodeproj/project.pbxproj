@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96A4E67621E892B700DC0F00 /* hogcascade_pedestrians.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64B21E892B700DC0F00 /* hogcascade_pedestrians.xml */; };
+		96A4E67721E892B700DC0F00 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64C21E892B700DC0F00 /* CMakeLists.txt */; };
+		96A4E67821E892B700DC0F00 /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64E21E892B700DC0F00 /* haarcascade_upperbody.xml */; };
+		96A4E67921E892B700DC0F00 /* haarcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64F21E892B700DC0F00 /* haarcascade_profileface.xml */; };
+		96A4E67A21E892B700DC0F00 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65021E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */; };
+		96A4E67B21E892B700DC0F00 /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65121E892B700DC0F00 /* haarcascade_eye.xml */; };
+		96A4E67C21E892B700DC0F00 /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65221E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */; };
+		96A4E67D21E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65321E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */; };
+		96A4E67E21E892B700DC0F00 /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65421E892B700DC0F00 /* haarcascade_righteye_2splits.xml */; };
+		96A4E67F21E892B700DC0F00 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65521E892B700DC0F00 /* haarcascade_frontalface_alt.xml */; };
+		96A4E68021E892B700DC0F00 /* haarcascade_lowerbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65621E892B700DC0F00 /* haarcascade_lowerbody.xml */; };
+		96A4E68121E892B700DC0F00 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65721E892B700DC0F00 /* haarcascade_frontalface_default.xml */; };
+		96A4E68221E892B700DC0F00 /* haarcascade_smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65821E892B700DC0F00 /* haarcascade_smile.xml */; };
+		96A4E68321E892B700DC0F00 /* haarcascade_fullbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65921E892B700DC0F00 /* haarcascade_fullbody.xml */; };
+		96A4E68421E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65A21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		96A4E68521E892B700DC0F00 /* trainingfaces_24-24.vec in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65C21E892B700DC0F00 /* trainingfaces_24-24.vec */; };
+		96A4E68621E892B700DC0F00 /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65E21E892B700DC0F00 /* haarcascade_upperbody.xml */; };
+		96A4E68721E892B700DC0F00 /* haarcascade_frontalcatface_extended.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E65F21E892B700DC0F00 /* haarcascade_frontalcatface_extended.xml */; };
+		96A4E68821E892B700DC0F00 /* haarcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66021E892B700DC0F00 /* haarcascade_profileface.xml */; };
+		96A4E68921E892B700DC0F00 /* haarcascade_frontalcatface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66121E892B700DC0F00 /* haarcascade_frontalcatface.xml */; };
+		96A4E68A21E892B700DC0F00 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66221E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */; };
+		96A4E68B21E892B700DC0F00 /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66321E892B700DC0F00 /* haarcascade_eye.xml */; };
+		96A4E68C21E892B700DC0F00 /* haarcascade_lefteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66421E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */; };
+		96A4E68D21E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66521E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */; };
+		96A4E68E21E892B700DC0F00 /* haarcascade_licence_plate_rus_16stages.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66621E892B700DC0F00 /* haarcascade_licence_plate_rus_16stages.xml */; };
+		96A4E68F21E892B700DC0F00 /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66721E892B700DC0F00 /* haarcascade_righteye_2splits.xml */; };
+		96A4E69021E892B700DC0F00 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66821E892B700DC0F00 /* haarcascade_frontalface_alt.xml */; };
+		96A4E69121E892B700DC0F00 /* haarcascade_lowerbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66921E892B700DC0F00 /* haarcascade_lowerbody.xml */; };
+		96A4E69221E892B700DC0F00 /* haarcascade_russian_plate_number.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66A21E892B700DC0F00 /* haarcascade_russian_plate_number.xml */; };
+		96A4E69321E892B700DC0F00 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66B21E892B700DC0F00 /* haarcascade_frontalface_default.xml */; };
+		96A4E69421E892B700DC0F00 /* haarcascade_smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66C21E892B700DC0F00 /* haarcascade_smile.xml */; };
+		96A4E69521E892B700DC0F00 /* haarcascade_fullbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66D21E892B700DC0F00 /* haarcascade_fullbody.xml */; };
+		96A4E69621E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E66E21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		96A4E69721E892B700DC0F00 /* lbpcascade_frontalface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67021E892B700DC0F00 /* lbpcascade_frontalface.xml */; };
+		96A4E69821E892B700DC0F00 /* lbpcascade_silverware.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67121E892B700DC0F00 /* lbpcascade_silverware.xml */; };
+		96A4E69921E892B700DC0F00 /* lbpcascade_frontalcatface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67221E892B700DC0F00 /* lbpcascade_frontalcatface.xml */; };
+		96A4E69A21E892B700DC0F00 /* lbpcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67321E892B700DC0F00 /* lbpcascade_profileface.xml */; };
+		96A4E69B21E892B700DC0F00 /* lbpcascade_frontalface_improved.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67421E892B700DC0F00 /* lbpcascade_frontalface_improved.xml */; };
+		96A4E69C21E892B700DC0F00 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E67521E892B700DC0F00 /* readme.txt */; };
+		96FA76F921E5D34E005D3D30 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96FA76F821E5D34E005D3D30 /* AppDelegate.mm */; };
+		96FA76FC21E5D34E005D3D30 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 96FA76FB21E5D34E005D3D30 /* ViewController.mm */; };
+		96FA76FF21E5D34E005D3D30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA76FD21E5D34E005D3D30 /* Main.storyboard */; };
+		96FA770121E5D351005D3D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96FA770021E5D351005D3D30 /* Assets.xcassets */; };
+		96FA770421E5D351005D3D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96FA770221E5D351005D3D30 /* LaunchScreen.storyboard */; };
+		96FA770721E5D351005D3D30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA770621E5D351005D3D30 /* main.m */; };
+		96FA770E21E5D358005D3D30 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA770D21E5D358005D3D30 /* opencv2.framework */; };
+		96FA771821E5D8FC005D3D30 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771721E5D8FC005D3D30 /* AssetsLibrary.framework */; };
+		96FA771C21E5F4BE005D3D30 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771B21E5F4BE005D3D30 /* CoreImage.framework */; };
+		96FA771E21E5F4C7005D3D30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771D21E5F4C7005D3D30 /* CoreGraphics.framework */; };
+		96FA772021E5F4CF005D3D30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771F21E5F4CF005D3D30 /* QuartzCore.framework */; };
+		96FA772421E5F583005D3D30 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771521E5D8EF005D3D30 /* CoreMedia.framework */; };
+		96FA772621E5F794005D3D30 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA772521E5F794005D3D30 /* libstdc++.tbd */; };
+		96FA772921E5FA9B005D3D30 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA772121E5F4D6005D3D30 /* Accelerate.framework */; };
+		96FA773021E5FBA2005D3D30 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FA771321E5D8E6005D3D30 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96A4E64B21E892B700DC0F00 /* hogcascade_pedestrians.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hogcascade_pedestrians.xml; sourceTree = "<group>"; };
+		96A4E64C21E892B700DC0F00 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		96A4E64E21E892B700DC0F00 /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
+		96A4E64F21E892B700DC0F00 /* haarcascade_profileface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_profileface.xml; sourceTree = "<group>"; };
+		96A4E65021E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		96A4E65121E892B700DC0F00 /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		96A4E65221E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
+		96A4E65321E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		96A4E65421E892B700DC0F00 /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
+		96A4E65521E892B700DC0F00 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		96A4E65621E892B700DC0F00 /* haarcascade_lowerbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lowerbody.xml; sourceTree = "<group>"; };
+		96A4E65721E892B700DC0F00 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		96A4E65821E892B700DC0F00 /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
+		96A4E65921E892B700DC0F00 /* haarcascade_fullbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_fullbody.xml; sourceTree = "<group>"; };
+		96A4E65A21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		96A4E65C21E892B700DC0F00 /* trainingfaces_24-24.vec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "trainingfaces_24-24.vec"; sourceTree = "<group>"; };
+		96A4E65E21E892B700DC0F00 /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
+		96A4E65F21E892B700DC0F00 /* haarcascade_frontalcatface_extended.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalcatface_extended.xml; sourceTree = "<group>"; };
+		96A4E66021E892B700DC0F00 /* haarcascade_profileface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_profileface.xml; sourceTree = "<group>"; };
+		96A4E66121E892B700DC0F00 /* haarcascade_frontalcatface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalcatface.xml; sourceTree = "<group>"; };
+		96A4E66221E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		96A4E66321E892B700DC0F00 /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		96A4E66421E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lefteye_2splits.xml; sourceTree = "<group>"; };
+		96A4E66521E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		96A4E66621E892B700DC0F00 /* haarcascade_licence_plate_rus_16stages.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_licence_plate_rus_16stages.xml; sourceTree = "<group>"; };
+		96A4E66721E892B700DC0F00 /* haarcascade_righteye_2splits.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_righteye_2splits.xml; sourceTree = "<group>"; };
+		96A4E66821E892B700DC0F00 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		96A4E66921E892B700DC0F00 /* haarcascade_lowerbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lowerbody.xml; sourceTree = "<group>"; };
+		96A4E66A21E892B700DC0F00 /* haarcascade_russian_plate_number.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_russian_plate_number.xml; sourceTree = "<group>"; };
+		96A4E66B21E892B700DC0F00 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		96A4E66C21E892B700DC0F00 /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
+		96A4E66D21E892B700DC0F00 /* haarcascade_fullbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_fullbody.xml; sourceTree = "<group>"; };
+		96A4E66E21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		96A4E67021E892B700DC0F00 /* lbpcascade_frontalface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_frontalface.xml; sourceTree = "<group>"; };
+		96A4E67121E892B700DC0F00 /* lbpcascade_silverware.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_silverware.xml; sourceTree = "<group>"; };
+		96A4E67221E892B700DC0F00 /* lbpcascade_frontalcatface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_frontalcatface.xml; sourceTree = "<group>"; };
+		96A4E67321E892B700DC0F00 /* lbpcascade_profileface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_profileface.xml; sourceTree = "<group>"; };
+		96A4E67421E892B700DC0F00 /* lbpcascade_frontalface_improved.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_frontalface_improved.xml; sourceTree = "<group>"; };
+		96A4E67521E892B700DC0F00 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		96FA76F421E5D34E005D3D30 /* OpenCVLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96FA76F721E5D34E005D3D30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96FA76F821E5D34E005D3D30 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		96FA76FA21E5D34E005D3D30 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96FA76FB21E5D34E005D3D30 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		96FA76FE21E5D34E005D3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96FA770021E5D351005D3D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96FA770321E5D351005D3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96FA770521E5D351005D3D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FA770621E5D351005D3D30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96FA770D21E5D358005D3D30 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		96FA771121E5D57A005D3D30 /* PrefixHeader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = PrefixHeader.h; sourceTree = "<group>"; };
+		96FA771321E5D8E6005D3D30 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		96FA771521E5D8EF005D3D30 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		96FA771721E5D8FC005D3D30 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		96FA771921E5F4AF005D3D30 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		96FA771B21E5F4BE005D3D30 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		96FA771D21E5F4C7005D3D30 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96FA771F21E5F4CF005D3D30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		96FA772121E5F4D6005D3D30 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		96FA772521E5F794005D3D30 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		96FA772721E5FA86005D3D30 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		96FA772B21E5FB36005D3D30 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		96FA773121E5FBA8005D3D30 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96FA76F121E5D34E005D3D30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FA773021E5FBA2005D3D30 /* AVFoundation.framework in Frameworks */,
+				96FA772921E5FA9B005D3D30 /* Accelerate.framework in Frameworks */,
+				96FA772621E5F794005D3D30 /* libstdc++.tbd in Frameworks */,
+				96FA770E21E5D358005D3D30 /* opencv2.framework in Frameworks */,
+				96FA772421E5F583005D3D30 /* CoreMedia.framework in Frameworks */,
+				96FA772021E5F4CF005D3D30 /* QuartzCore.framework in Frameworks */,
+				96FA771E21E5F4C7005D3D30 /* CoreGraphics.framework in Frameworks */,
+				96FA771C21E5F4BE005D3D30 /* CoreImage.framework in Frameworks */,
+				96FA771821E5D8FC005D3D30 /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96A4E64921E892B700DC0F00 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E64A21E892B700DC0F00 /* hogcascades */,
+				96A4E64C21E892B700DC0F00 /* CMakeLists.txt */,
+				96A4E64D21E892B700DC0F00 /* haarcascades_cuda */,
+				96A4E65B21E892B700DC0F00 /* vec_files */,
+				96A4E65D21E892B700DC0F00 /* haarcascades */,
+				96A4E66F21E892B700DC0F00 /* lbpcascades */,
+				96A4E67521E892B700DC0F00 /* readme.txt */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		96A4E64A21E892B700DC0F00 /* hogcascades */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E64B21E892B700DC0F00 /* hogcascade_pedestrians.xml */,
+			);
+			path = hogcascades;
+			sourceTree = "<group>";
+		};
+		96A4E64D21E892B700DC0F00 /* haarcascades_cuda */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E64E21E892B700DC0F00 /* haarcascade_upperbody.xml */,
+				96A4E64F21E892B700DC0F00 /* haarcascade_profileface.xml */,
+				96A4E65021E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */,
+				96A4E65121E892B700DC0F00 /* haarcascade_eye.xml */,
+				96A4E65221E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */,
+				96A4E65321E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */,
+				96A4E65421E892B700DC0F00 /* haarcascade_righteye_2splits.xml */,
+				96A4E65521E892B700DC0F00 /* haarcascade_frontalface_alt.xml */,
+				96A4E65621E892B700DC0F00 /* haarcascade_lowerbody.xml */,
+				96A4E65721E892B700DC0F00 /* haarcascade_frontalface_default.xml */,
+				96A4E65821E892B700DC0F00 /* haarcascade_smile.xml */,
+				96A4E65921E892B700DC0F00 /* haarcascade_fullbody.xml */,
+				96A4E65A21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */,
+			);
+			path = haarcascades_cuda;
+			sourceTree = "<group>";
+		};
+		96A4E65B21E892B700DC0F00 /* vec_files */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E65C21E892B700DC0F00 /* trainingfaces_24-24.vec */,
+			);
+			path = vec_files;
+			sourceTree = "<group>";
+		};
+		96A4E65D21E892B700DC0F00 /* haarcascades */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E65E21E892B700DC0F00 /* haarcascade_upperbody.xml */,
+				96A4E65F21E892B700DC0F00 /* haarcascade_frontalcatface_extended.xml */,
+				96A4E66021E892B700DC0F00 /* haarcascade_profileface.xml */,
+				96A4E66121E892B700DC0F00 /* haarcascade_frontalcatface.xml */,
+				96A4E66221E892B700DC0F00 /* haarcascade_frontalface_alt2.xml */,
+				96A4E66321E892B700DC0F00 /* haarcascade_eye.xml */,
+				96A4E66421E892B700DC0F00 /* haarcascade_lefteye_2splits.xml */,
+				96A4E66521E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml */,
+				96A4E66621E892B700DC0F00 /* haarcascade_licence_plate_rus_16stages.xml */,
+				96A4E66721E892B700DC0F00 /* haarcascade_righteye_2splits.xml */,
+				96A4E66821E892B700DC0F00 /* haarcascade_frontalface_alt.xml */,
+				96A4E66921E892B700DC0F00 /* haarcascade_lowerbody.xml */,
+				96A4E66A21E892B700DC0F00 /* haarcascade_russian_plate_number.xml */,
+				96A4E66B21E892B700DC0F00 /* haarcascade_frontalface_default.xml */,
+				96A4E66C21E892B700DC0F00 /* haarcascade_smile.xml */,
+				96A4E66D21E892B700DC0F00 /* haarcascade_fullbody.xml */,
+				96A4E66E21E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml */,
+			);
+			path = haarcascades;
+			sourceTree = "<group>";
+		};
+		96A4E66F21E892B700DC0F00 /* lbpcascades */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E67021E892B700DC0F00 /* lbpcascade_frontalface.xml */,
+				96A4E67121E892B700DC0F00 /* lbpcascade_silverware.xml */,
+				96A4E67221E892B700DC0F00 /* lbpcascade_frontalcatface.xml */,
+				96A4E67321E892B700DC0F00 /* lbpcascade_profileface.xml */,
+				96A4E67421E892B700DC0F00 /* lbpcascade_frontalface_improved.xml */,
+			);
+			path = lbpcascades;
+			sourceTree = "<group>";
+		};
+		96FA76EB21E5D34D005D3D30 = {
+			isa = PBXGroup;
+			children = (
+				96FA76F621E5D34E005D3D30 /* OpenCVLearn */,
+				96FA76F521E5D34E005D3D30 /* Products */,
+				96FA771221E5D8E6005D3D30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		96FA76F521E5D34E005D3D30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96FA76F421E5D34E005D3D30 /* OpenCVLearn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96FA76F621E5D34E005D3D30 /* OpenCVLearn */ = {
+			isa = PBXGroup;
+			children = (
+				96A4E64921E892B700DC0F00 /* data */,
+				96FA770D21E5D358005D3D30 /* opencv2.framework */,
+				96FA76F721E5D34E005D3D30 /* AppDelegate.h */,
+				96FA76F821E5D34E005D3D30 /* AppDelegate.mm */,
+				96FA76FA21E5D34E005D3D30 /* ViewController.h */,
+				96FA76FB21E5D34E005D3D30 /* ViewController.mm */,
+				96FA771121E5D57A005D3D30 /* PrefixHeader.h */,
+				96FA76FD21E5D34E005D3D30 /* Main.storyboard */,
+				96FA770021E5D351005D3D30 /* Assets.xcassets */,
+				96FA770221E5D351005D3D30 /* LaunchScreen.storyboard */,
+				96FA770521E5D351005D3D30 /* Info.plist */,
+				96FA770621E5D351005D3D30 /* main.m */,
+			);
+			path = OpenCVLearn;
+			sourceTree = "<group>";
+		};
+		96FA771221E5D8E6005D3D30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96FA773121E5FBA8005D3D30 /* AVKit.framework */,
+				96FA772B21E5FB36005D3D30 /* Photos.framework */,
+				96FA772721E5FA86005D3D30 /* ImageIO.framework */,
+				96FA772521E5F794005D3D30 /* libstdc++.tbd */,
+				96FA772121E5F4D6005D3D30 /* Accelerate.framework */,
+				96FA771F21E5F4CF005D3D30 /* QuartzCore.framework */,
+				96FA771D21E5F4C7005D3D30 /* CoreGraphics.framework */,
+				96FA771B21E5F4BE005D3D30 /* CoreImage.framework */,
+				96FA771921E5F4AF005D3D30 /* libc++.tbd */,
+				96FA771721E5D8FC005D3D30 /* AssetsLibrary.framework */,
+				96FA771521E5D8EF005D3D30 /* CoreMedia.framework */,
+				96FA771321E5D8E6005D3D30 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96FA76F321E5D34E005D3D30 /* OpenCVLearn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96FA770A21E5D351005D3D30 /* Build configuration list for PBXNativeTarget "OpenCVLearn" */;
+			buildPhases = (
+				96FA76F021E5D34E005D3D30 /* Sources */,
+				96FA76F121E5D34E005D3D30 /* Frameworks */,
+				96FA76F221E5D34E005D3D30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenCVLearn;
+			productName = OpenCVLearn;
+			productReference = 96FA76F421E5D34E005D3D30 /* OpenCVLearn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96FA76EC21E5D34D005D3D30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = JK;
+				TargetAttributes = {
+					96FA76F321E5D34E005D3D30 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 96FA76EF21E5D34D005D3D30 /* Build configuration list for PBXProject "OpenCVLearn" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96FA76EB21E5D34D005D3D30;
+			productRefGroup = 96FA76F521E5D34E005D3D30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96FA76F321E5D34E005D3D30 /* OpenCVLearn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96FA76F221E5D34E005D3D30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A4E68D21E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml in Resources */,
+				96A4E68021E892B700DC0F00 /* haarcascade_lowerbody.xml in Resources */,
+				96A4E69A21E892B700DC0F00 /* lbpcascade_profileface.xml in Resources */,
+				96A4E68F21E892B700DC0F00 /* haarcascade_righteye_2splits.xml in Resources */,
+				96A4E67D21E892B700DC0F00 /* haarcascade_frontalface_alt_tree.xml in Resources */,
+				96A4E69221E892B700DC0F00 /* haarcascade_russian_plate_number.xml in Resources */,
+				96A4E68521E892B700DC0F00 /* trainingfaces_24-24.vec in Resources */,
+				96A4E67621E892B700DC0F00 /* hogcascade_pedestrians.xml in Resources */,
+				96A4E67E21E892B700DC0F00 /* haarcascade_righteye_2splits.xml in Resources */,
+				96A4E67B21E892B700DC0F00 /* haarcascade_eye.xml in Resources */,
+				96A4E68421E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				96A4E69121E892B700DC0F00 /* haarcascade_lowerbody.xml in Resources */,
+				96A4E67821E892B700DC0F00 /* haarcascade_upperbody.xml in Resources */,
+				96A4E69921E892B700DC0F00 /* lbpcascade_frontalcatface.xml in Resources */,
+				96A4E69021E892B700DC0F00 /* haarcascade_frontalface_alt.xml in Resources */,
+				96A4E67A21E892B700DC0F00 /* haarcascade_frontalface_alt2.xml in Resources */,
+				96A4E68C21E892B700DC0F00 /* haarcascade_lefteye_2splits.xml in Resources */,
+				96FA770421E5D351005D3D30 /* LaunchScreen.storyboard in Resources */,
+				96A4E69C21E892B700DC0F00 /* readme.txt in Resources */,
+				96A4E68321E892B700DC0F00 /* haarcascade_fullbody.xml in Resources */,
+				96FA770121E5D351005D3D30 /* Assets.xcassets in Resources */,
+				96FA76FF21E5D34E005D3D30 /* Main.storyboard in Resources */,
+				96A4E68621E892B700DC0F00 /* haarcascade_upperbody.xml in Resources */,
+				96A4E68721E892B700DC0F00 /* haarcascade_frontalcatface_extended.xml in Resources */,
+				96A4E67721E892B700DC0F00 /* CMakeLists.txt in Resources */,
+				96A4E67F21E892B700DC0F00 /* haarcascade_frontalface_alt.xml in Resources */,
+				96A4E69621E892B700DC0F00 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				96A4E67921E892B700DC0F00 /* haarcascade_profileface.xml in Resources */,
+				96A4E68A21E892B700DC0F00 /* haarcascade_frontalface_alt2.xml in Resources */,
+				96A4E69321E892B700DC0F00 /* haarcascade_frontalface_default.xml in Resources */,
+				96A4E69721E892B700DC0F00 /* lbpcascade_frontalface.xml in Resources */,
+				96A4E68221E892B700DC0F00 /* haarcascade_smile.xml in Resources */,
+				96A4E69521E892B700DC0F00 /* haarcascade_fullbody.xml in Resources */,
+				96A4E68E21E892B700DC0F00 /* haarcascade_licence_plate_rus_16stages.xml in Resources */,
+				96A4E69821E892B700DC0F00 /* lbpcascade_silverware.xml in Resources */,
+				96A4E68921E892B700DC0F00 /* haarcascade_frontalcatface.xml in Resources */,
+				96A4E69B21E892B700DC0F00 /* lbpcascade_frontalface_improved.xml in Resources */,
+				96A4E68821E892B700DC0F00 /* haarcascade_profileface.xml in Resources */,
+				96A4E68121E892B700DC0F00 /* haarcascade_frontalface_default.xml in Resources */,
+				96A4E68B21E892B700DC0F00 /* haarcascade_eye.xml in Resources */,
+				96A4E67C21E892B700DC0F00 /* haarcascade_lefteye_2splits.xml in Resources */,
+				96A4E69421E892B700DC0F00 /* haarcascade_smile.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96FA76F021E5D34E005D3D30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FA76FC21E5D34E005D3D30 /* ViewController.mm in Sources */,
+				96FA770721E5D351005D3D30 /* main.m in Sources */,
+				96FA76F921E5D34E005D3D30 /* AppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96FA76FD21E5D34E005D3D30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FA76FE21E5D34E005D3D30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96FA770221E5D351005D3D30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FA770321E5D351005D3D30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96FA770821E5D351005D3D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96FA770921E5D351005D3D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96FA770B21E5D351005D3D30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVLearn",
+				);
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OpenCVLearn/PrefixHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/OpenCVLearn/opencv2.framework/Headers",
+					"$(SRCROOT)/OpenCVLearn/opencv2.framework",
+				);
+				INFOPLIST_FILE = OpenCVLearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacky.ccc.OpenCVLearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96FA770C21E5D351005D3D30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenCVLearn",
+				);
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/OpenCVLearn/PrefixHeader.h";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/OpenCVLearn/opencv2.framework/Headers",
+					"$(SRCROOT)/OpenCVLearn/opencv2.framework",
+				);
+				INFOPLIST_FILE = OpenCVLearn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacky.ccc.OpenCVLearn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96FA76EF21E5D34D005D3D30 /* Build configuration list for PBXProject "OpenCVLearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96FA770821E5D351005D3D30 /* Debug */,
+				96FA770921E5D351005D3D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96FA770A21E5D351005D3D30 /* Build configuration list for PBXNativeTarget "OpenCVLearn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96FA770B21E5D351005D3D30 /* Debug */,
+				96FA770C21E5D351005D3D30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96FA76EC21E5D34D005D3D30 /* Project object */;
+}

@@ -5,6 +5,8 @@
 ## Build generated
 build/
 DerivedData/
+OpenCVLearn/OpenCVLearn/opencv2.framework
+OpenCVLearn/OpenCVLearn/opencv2.framework/
 
 ## Various settings
 *.pbxuser
