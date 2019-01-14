@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963BF4C821EC2C2100B0E244 /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 963BF4C721EC2C2100B0E244 /* MaskView.m */; };
 		96A4E67621E892B700DC0F00 /* hogcascade_pedestrians.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64B21E892B700DC0F00 /* hogcascade_pedestrians.xml */; };
 		96A4E67721E892B700DC0F00 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64C21E892B700DC0F00 /* CMakeLists.txt */; };
 		96A4E67821E892B700DC0F00 /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 96A4E64E21E892B700DC0F00 /* haarcascade_upperbody.xml */; };
@@ -64,6 +65,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		963BF4C621EC2C2100B0E244 /* MaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
+		963BF4C721EC2C2100B0E244 /* MaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
 		96A4E64B21E892B700DC0F00 /* hogcascade_pedestrians.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hogcascade_pedestrians.xml; sourceTree = "<group>"; };
 		96A4E64C21E892B700DC0F00 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		96A4E64E21E892B700DC0F00 /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				96FA76F821E5D34E005D3D30 /* AppDelegate.mm */,
 				96FA76FA21E5D34E005D3D30 /* ViewController.h */,
 				96FA76FB21E5D34E005D3D30 /* ViewController.mm */,
+				963BF4C621EC2C2100B0E244 /* MaskView.h */,
+				963BF4C721EC2C2100B0E244 /* MaskView.m */,
 				96FA771121E5D57A005D3D30 /* PrefixHeader.h */,
 				96FA76FD21E5D34E005D3D30 /* Main.storyboard */,
 				96FA770021E5D351005D3D30 /* Assets.xcassets */,
@@ -399,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963BF4C821EC2C2100B0E244 /* MaskView.m in Sources */,
 				96FA76FC21E5D34E005D3D30 /* ViewController.mm in Sources */,
 				96FA770721E5D351005D3D30 /* main.m in Sources */,
 				96FA76F921E5D34E005D3D30 /* AppDelegate.mm in Sources */,

@@ -12,10 +12,17 @@
 #import "ViewController.h"
 #include "opencv2.framework/Headers/opencv.hpp"
 #import "opencv2.framework/Headers/videoio/cap_ios.h"
+#import "MaskView.h"
 
 @interface ViewController ()<CvVideoCameraDelegate>
 
 @property (nonatomic, strong) UIView *backView;
+
+@property (nonatomic, strong) UILabel *labelView;
+@property (nonatomic, strong) UIView *labelBackView;
+@property (nonatomic, strong) MaskView *maskView;
+@property (nonatomic, strong) NSMutableArray *faceRectArr;
+@property (nonatomic, strong) CIDetector *faceDetector;
 
 @property (nonatomic, strong) CvVideoCamera *camera;
 
@@ -26,10 +33,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.faceRectArr = [NSMutableArray array];
     
     self.backView = [[UIView alloc] init];
     self.backView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50);
     [self.view addSubview:self.backView];
+    
+    self.maskView = [[MaskView alloc] initWithFrame:self.backView.bounds];
+    self.maskView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
+    
+    self.labelBackView = [[UIView alloc] init];
+    self.labelBackView.frame = self.backView.frame;
+    [self.view addSubview:self.labelBackView];
+    
+    self.labelView = [[UILabel alloc] init];
+    self.labelView.text = @"123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123123124123123123123";
+    self.labelView.textAlignment = NSTextAlignmentLeft;
+    self.labelView.textColor = [UIColor whiteColor];
+    self.labelView.font = [UIFont systemFontOfSize:30];
+    self.labelView.numberOfLines = 0;
+    self.labelView.frame = self.backView.bounds;
+    [self.labelBackView addSubview:self.labelView];
+    
+    self.labelBackView.maskView = self.maskView;
     
     self.camera = [[CvVideoCamera alloc] initWithParentView:self.backView];
     self.camera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
@@ -54,7 +80,7 @@
     if (image.empty()) {
         return;
     }
-    [self faceDetector:image];
+    [self bilibiliHeadFloat:image];
 }
 
 #pragma mark - actions
@@ -275,8 +301,149 @@ const static cv::Scalar colors[] =
 
 - (void)filter:(cv::Mat &)image
 {
+    cv::Mat kernel = (cv::Mat_<char>(3,3) << 0, -1 ,0,
+                -1, 5, -1,
+                0, -1, 0);
+//    cv::Mat outputImage;
+    cv::filter2D(image, image, -1, kernel);
+}
+
+- (void)bilibiliHeadFloat:(cv::Mat &)image
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *fontface = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_alt" ofType:@"xml"];
+        cascade.load(cv::samples::findFile([fontface cStringUsingEncoding:NSUTF8StringEncoding]));
+    });
+
+    std::vector<cv::Rect> faces;
+    cv::Mat gray, smallImg;
+    cvtColor(image, gray, cv::COLOR_BGR2GRAY );
+    double fx = 1 / scale;
+    cv::resize( gray, smallImg, cv::Size(), fx, fx, cv::INTER_LINEAR_EXACT );
+    equalizeHist( smallImg, smallImg );
+
+    cascade.detectMultiScale( smallImg, faces,
+                             1.1, 2, 0
+//                             |cv::CASCADE_FIND_BIGGEST_OBJECT
+//                             |cv::CASCADE_DO_ROUGH_SEARCH
+                             |cv::CASCADE_SCALE_IMAGE,
+                             cv::Size(50, 50) );
+    [self.faceRectArr removeAllObjects];
+    for ( size_t i = 0; i < faces.size(); i++ )
+    {
+        cv::Rect r = faces[i];
+        cv::Mat smallImgROI;
+        cv::Point center;
+        double aspect_ratio = (double)r.width/r.height;
+        if( 0.75 < aspect_ratio && aspect_ratio < 1.3 )
+        {
+            center.x = cvRound((r.x + r.width*0.5)*scale);
+            center.y = cvRound((r.y + r.height*0.5)*scale);
+
+            CGRect faceRect = CGRectMake(r.x * 0.4, r.y * 0.4, r.width * 0.5, r.height * 0.5);
+            [self.faceRectArr addObject:[NSValue valueWithCGRect:faceRect]];
+            cv::ellipse(image, cv::RotatedRect(center,r.size(),0), colors[3]);
+        }
+        else{
+            cv::rectangle( image, cv::Point(cvRound(r.x*scale), cvRound(r.y*scale)),
+                      cv::Point(cvRound((r.x + r.width-1)*scale), cvRound((r.y + r.height-1)*scale)),
+                      colors[0], 3, 8, 0);
+        }
+    }
+
+    [self drawMaskView:self.faceRectArr];
+    
+    
+    ////CIDetector
+    
+//    CVImageBufferRef buffer = [self getImageBufferFromMat:image];
+//    CIImage *cImg = [CIImage imageWithCVImageBuffer:buffer];
+//    NSArray<CIFeature *>* detectResult = [self.faceDetector featuresInImage:cImg];
+//    [self.faceRectArr removeAllObjects];
+//    for (CIFaceFeature *feature in detectResult) {
+//        if ([feature isKindOfClass:[CIFaceFeature class]]) {
+////            NSLog(@"ciface --- %@",NSStringFromCGRect(feature.bounds));
+//            CGRect transRect = [self convertUIRect:feature.bounds];
+//            [self.faceRectArr addObject:[NSValue valueWithCGRect:transRect]];
+//            NSLog(@"trans --- %@",NSStringFromCGRect(transRect));
+//        }
+//    }
+//    CVPixelBufferRelease(buffer);
+//    [self drawMaskView:self.faceRectArr];
     
 }
 
+- (CGRect)convertUIRect:(CGRect)rect
+{
+    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
+    transform = CGAffineTransformTranslate(transform,
+                                           0, -([UIScreen mainScreen].bounds.size.height - 50));
+    transform = CGAffineTransformScale(transform, 0.33, 0.33);//@3x 
+    return CGRectApplyAffineTransform(rect, transform);
+}
+
+- (void)drawMaskView:(NSArray *)rectArr
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.maskView.redrawRectArr = rectArr;
+    });
+}
+
+- (cv::Mat)matFromImageBuffer: (CVImageBufferRef) buffer {
+    
+    cv::Mat mat ;
+    
+    CVPixelBufferLockBaseAddress(buffer, 0);
+    
+    void *address = CVPixelBufferGetBaseAddress(buffer);
+    int width = (int) CVPixelBufferGetWidth(buffer);
+    int height = (int) CVPixelBufferGetHeight(buffer);
+    
+    mat   = cv::Mat(height, width, CV_8UC4, address, 0);
+    //cv::cvtColor(mat, _mat, CV_BGRA2BGR);
+    
+    CVPixelBufferUnlockBaseAddress(buffer, 0);
+    
+    return mat;
+}
+
+- (CVImageBufferRef)getImageBufferFromMat:(cv::Mat)mat {
+    
+    cv::cvtColor(mat, mat, cv::COLOR_BGR2BGRA);
+    
+    int width = mat.cols;
+    int height = mat.rows;
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             // [NSNumber numberWithBool:YES], kCVPixelBufferCGImageCompatibilityKey,
+                             // [NSNumber numberWithBool:YES], kCVPixelBufferCGBitmapContextCompatibilityKey,
+                             [NSNumber numberWithInt:width], kCVPixelBufferWidthKey,
+                             [NSNumber numberWithInt:height], kCVPixelBufferHeightKey,
+                             nil];
+    
+    CVPixelBufferRef imageBuffer;
+    CVReturn status = CVPixelBufferCreate(kCFAllocatorMalloc, width, height, kCVPixelFormatType_32BGRA, (CFDictionaryRef) CFBridgingRetain(options), &imageBuffer) ;
+    
+    
+    NSParameterAssert(status == kCVReturnSuccess && imageBuffer != NULL);
+    
+    CVPixelBufferLockBaseAddress(imageBuffer, 0);
+    void *base = CVPixelBufferGetBaseAddress(imageBuffer) ;
+    memcpy(base, mat.data, mat.total()*4);
+    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    
+    return imageBuffer;
+}
+
+- (CIDetector *)faceDetector
+{
+    if (!_faceDetector) {
+        NSDictionary* param = [NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh forKey:CIDetectorAccuracy];
+        CIContext *ctx = [CIContext contextWithOptions:nil];
+        _faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:ctx options:param];
+    }
+    return _faceDetector;
+}
 
 @end
